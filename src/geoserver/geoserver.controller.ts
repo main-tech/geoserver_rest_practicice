@@ -14,7 +14,7 @@ const storage = diskStorage({
 });
 const workspace = 'personal';
 const datastore = 'personal_store';
-const geoserver_url = 'http://localhost:8080/geoserver';
+const geoserver_url = 'http://localhost:8080/geoserver/';
 const geoserverusername = 'admin'
 const geoserverpassword = 'geoserver'
 
@@ -229,7 +229,7 @@ export class GeoserverController {
         } else {
           console.log('Error uploading shapefile:', res.statusCode, res.statusMessage);
           // Cleanup
-          fs.unlinkSync(path); // Delete the uploaded shapefile zip
+          // fs.unlinkSync(path); // Delete the uploaded shapefile zip
         }
       });
 
